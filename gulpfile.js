@@ -33,14 +33,14 @@ gulp.task('optimize-images', function () {
 });
 
 gulp.task('optimize-css', function() {
-   return gulp.src('_site/css/main.css')
+   return gulp.src('_site/assets/css/main.css')
 	   .pipe(autoprefixer())
 	   .pipe(uncss({
 		   html: ['_site/**/*.html'],
 		   ignore: []
 	   }))
 	   .pipe(minifyCss({keepBreaks: false}))
-	   .pipe(gulp.dest('_site/css/'));
+	   .pipe(gulp.dest('_site/assets/css/'));
 });
 
 gulp.task('optimize-html', function() {
@@ -48,8 +48,8 @@ gulp.task('optimize-html', function() {
 		.pipe(minifyHTML({
 			quotes: true
 		}))
-		.pipe(replace(/<link href=\"\/css\/main.css\"[^>]*>/, function(s) {
-			var style = fs.readFileSync('_site/css/main.css', 'utf8');
+		.pipe(replace('<link rel="stylesheet" href="/assets/css/main.css">', function(s) {
+			var style = fs.readFileSync('_site/assets/css/main.css', 'utf8');
 			return '<style>\n' + style + '\n</style>';
 		}))
 		.pipe(gulp.dest('_site/'));
@@ -57,7 +57,7 @@ gulp.task('optimize-html', function() {
 
 gulp.task('fetch-newest-analytics', function() {
 	return download('https://www.google-analytics.com/analytics.js')
-    	.pipe(gulp.dest('assets/'));
+    	.pipe(gulp.dest('assets/js'));
 });
 
 gulp.task('rsync-files', function() {
