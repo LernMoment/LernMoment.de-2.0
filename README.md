@@ -1,27 +1,43 @@
-# jekyll-gulp-optimizations | Getting you to a Google PageSpeed Insights score of 100
+# Jekyll Boilerplate
 
-This is an adaption and extension of a already very good gulp script from Steve Edson's post [Automating optimisations with Gulp](https://steveedson.co.uk/gulp/advanced-tasks/).
+Jekyll Boilerplate is a lightweight and cleaned up version of the initial [Jekyll](https://jekyllrb.com/) setup. The motivation behind this project was for me to avoid doing the same things over and over every time I build yet another site with Jekyll.
 
-## For further explanation take a look at [my blog post about it.](https://www.dimitrikoenig.net/scoring-100-on-googles-pagespeed-insights.html)
+## Features
 
-## Installation
+### Additions
 
-1. Clone this repo and move the files into your jekyll root folder
-2. Edit the gulpconfig.json file and place your server and cloudflare credentials in there
-3. run `npm install gulp -g` to install gulp globally and be able to run `gulp` commands
-4. run `npm install` to install all needed dependencies
-5. run `gulp deploy` to do the whole build and deploy to your server
+* An empty folder has been created at `assets/images`.
+* An empty folder has been created at `assets/js`.
+* An initial configuration for Kramdown has been added.
+* The CSS is being minified via Sass.
+* Some project-agnostic base styles have been added.
+* Normalize.css has been added.
+* `.DS_Store` and `node_modules` have been added to `.gitignore`.
+* The `jekyll-feed` gem has been added to automate Atom feed generation.
+* The `jekyll-sitemap` gem has been added to automate sitemap generation.
 
-## Available commands
+### Editions
 
-### gulp deploy
+* The `_sass` folder has been moved to `assets/sass`.
+* The `css` folder has been moved to `assets/css`.
+* The `default.html` layout has been cleaned up.
+* The `index.html` has been cleaned up.
 
-Builds and deploys all files to your server
+### Deletions
 
-### gulp dry-run
+* The `about.md` file has been removed.
+* The `page.html` and `post.html` layouts have been removed.
+* The sample post and the `_posts` folder have been removed.
+* All initial partials from the `_includes` folder but `head.html` have been removed.
+* Options `email`, `twitter_username`, `github_username` have been removed.
+* All the existing styles have been removed.
 
-Builds without deploying all files to your server, for testing reasons. You can run `jekyll serve` and do a parallel `gulp dry-run` command to see how your local output will look like.
+### Fixes
 
-### gulp raw-deploy
+* A `lang` attribute has been added to the default layout.
+* A `<main>` element has been added to the default layout.
 
-Does to normal `jekyll build` and deploys directly to your server, without any optimizations.
+## Credits
+
+* [Jekyll](https://jekyllrb.com/)
+* [Hugo Giraudel](https://twitter.com/HugoGiraudel)
