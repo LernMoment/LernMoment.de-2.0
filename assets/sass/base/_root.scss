@@ -134,8 +134,15 @@ header#hero {
 }
 
 #cookie-bar {
+  p {
+    font-family: "Open Sans",sans-serif!important;
+    font-weight: 300;
+    font-size: 10px;   
+  }
   #cookie-bar-button {
-    font-family: "Open Sans",sans-serif;
+    font-family: "Open Sans",sans-serif!important;
+    font-weight: 300;
+    font-size: 10px;  
     color: rgb(250, 250, 250)!important;
     cursor: pointer;
     display: inline-block;
@@ -145,7 +152,6 @@ header#hero {
     border-radius: 100px;
     background-color: rgb(255, 167, 38);
     border: none;
-    font-weight: 400;
     &:hover {
       background-color: rgb(251, 140, 0);
       text-decoration: none;
