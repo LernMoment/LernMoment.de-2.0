@@ -1,0 +1,20 @@
+---
+layout: page
+---
+
+<div class="blog-overview">
+  {% assign categories = site.categories | sort %}
+  {% for category in categories %}
+    <h3>{{ category | first }}</h3>
+    <p>{% for posts in category %}
+      {% for post in posts %}
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          {{ post.title }}
+        </a>
+        {% if forloop.last == false %}
+          ,&nbsp;&nbsp;
+        {% endif %}
+      {% endfor %} 
+    {% endfor %}</p>
+  {% endfor %}
+</div>
