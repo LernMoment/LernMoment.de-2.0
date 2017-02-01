@@ -137,3 +137,15 @@ header#hero {
   padding-left: 5vw;
   padding-right: 5vw;
 }
+
+.addthis_default_style {
+  // Hacking AddThis default style
+  position: absolute;
+  right: 16px;
+  top: 56px;
+}
+
+#cookie-bar {
+  // Hacking CookieBar z-index to show it over AddThis
+  z-index: 10000;
+}
