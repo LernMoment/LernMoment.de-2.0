@@ -90,12 +90,13 @@ nav {
   }
 }
 
-button {
+.button {
   color: $lm-ci-text;
   background-color: $lm-ci;
   cursor: pointer;
   display: inline-block;
   text-align: center;
+  text-transform: uppercase;
   white-space: nowrap;
   border-radius: 100px;
   line-height: 2.5;
@@ -103,6 +104,7 @@ button {
   padding-right: 2.5em;
   border: none;
   &:hover {
+    color: $lm-ci-text;
     background-color: $lm-ci-hover;
   }
 }
@@ -148,4 +150,29 @@ header#hero {
 #cookie-bar {
   // Hacking CookieBar z-index to show it over AddThis
   z-index: 10000;
+}
+
+.course {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-bottom: 50px;
+  z-index: 2;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  img {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    max-height: 100%;
+    max-width: 20%;
+  }
+  h2, h3, p, button {
+    max-width: 80%;   
+  }
+  .course-button-wrapper {
+    width: 100%;
+    text-align: center;
+  }
 }
