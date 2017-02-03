@@ -24,23 +24,22 @@ a {
 }
 
 h1 {
-  font-size: 12vmin;
+  font-size: 26px;
 }
+
 h2 {
-  font-size: 6vmin;
+  font-size: 24px;
 }
 
 h3 {
   font-size: 22px;
-  margin-bottom: 0;
 }
 
 h4 {
   font-size: 20px;
-  margin-bottom: 0;
 }
 
-p {
+p, ol, ul, li {
   font-size: 18px;
 }
 
@@ -55,7 +54,7 @@ h1, h2, h3 {
 }
 
 h4, h5 {
-  letter-spacing: 0;
+  letter-spacing: 1.5px;
 }
 
 .abstract {
@@ -115,6 +114,17 @@ nav {
 }
 
 header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+  .lernmoment-headline {
+    font-size: 12vmin;
+    margin-bottom: 6vmin;
+  }
+  .lernmoment-subheadline {
+    font-size: 6vmin;
+    margin-bottom: 6vmin;
+  }
   a {
     color: inherit;
     &:hover {
@@ -137,12 +147,12 @@ header {
 header#hero {
   min-height: 100vh;
   section {
-    padding-top: 45vh;
+    padding-top: 40vh;
   }
 }
 
 .content {
-  max-width: 1000px;
+  max-width: 740px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 5vh;
@@ -155,7 +165,7 @@ header#hero {
   // Hacking AddThis default style
   position: absolute;
   right: 16px;
-  top: 56px;
+  top: 70px;
 }
 
 #cookie-bar {
@@ -163,11 +173,49 @@ header#hero {
   z-index: 10000;
 }
 
+.blog-category-overview {
+  a {
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+.post-preview {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.blog-category-wrapper {
+  overflow: auto;
+}
+
+.blog-category-box {
+  width: 40%;
+  float: left;
+  height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  position: relative;
+
+}
+
 .course {
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 10px;
   margin-bottom: 50px;
+  padding-left: 20px;
   z-index: 2;
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);

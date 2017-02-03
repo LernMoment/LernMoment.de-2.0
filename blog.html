@@ -5,8 +5,48 @@ title: blog
 
 <div class="blog-overview">
   {% assign categories = site.categories | sort %}
+<div class="blog-category-wrapper">
+      <a href="/blog/alle">
+        <div class="blog-category-box">
+            Alle
+        </div>
+      </a>
+      <a href="/blog/angular2">
+        <div class="blog-category-box">
+            Angular 2
+        </div>
+      </a>
+    
+      <a href="/blog/csharp-challenge">
+        <div class="blog-category-box">
+            C# Challange
+        </div>
+      </a>
+      <a href="/blog/csharp-programmieren">
+        <div class="blog-category-box">
+            C# Programmieren  
+        </div>
+      </a>
+      <a href="/blog/csharp-tutorial-deutsch">
+        <div class="blog-category-box">
+            C# Tutorial
+        </div>
+      </a>
+      <a href="/blog/einstieg-csharp">
+        <div class="blog-category-box">
+          Einstieg C#
+        </div>
+      </a>
+
+      <a href="/blog/hintergrund">
+        <div class="blog-category-box">
+          Hintergrund
+        </div>
+      </a>
+    
+  </div>
   {% for category in categories %}
-    <h3>{{ category | first }}</h3>
+    <h2>{{ category | first }}</h2>
     <p>{% for posts in category %}
       {% for post in posts %}
         <a href="{{ post.url | prepend: site.baseurl }}">
