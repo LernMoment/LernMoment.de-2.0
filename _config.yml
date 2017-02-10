@@ -15,9 +15,6 @@ permalink:  /:categories/:title/
 
 # Markdown settings
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 
 # Sass settings
 sass:

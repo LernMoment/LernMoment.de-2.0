@@ -61,6 +61,36 @@ h4, h5 {
   font-weight: 400;
 }
 
+footer {
+  position: relative;
+  bottom: 0;
+  min-width: 100vw;
+  height: 30px;
+  background-color: black;
+  ul {
+    max-height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    li {
+      float: left;
+      a {
+        display: inline-block;
+        color: $lm-ci-text;
+        text-align: center;
+        padding: 9px 16px;
+        font-size: 12px;
+        &:hover {
+          color: $lm-ci-text;
+          background-color: $lm-ci-hover;
+        }
+      }
+    }
+  } 
+}
+
 nav {
   position: absolute;
   top: 0;
