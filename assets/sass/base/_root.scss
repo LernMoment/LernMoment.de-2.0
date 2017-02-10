@@ -39,7 +39,7 @@ h4 {
   font-size: 20px;
 }
 
-p, ol, ul, li {
+p, ol, ul, li, legend {
   font-size: 18px;
 }
 
@@ -94,7 +94,7 @@ nav {
   }
 }
 
-.button {
+.button, .subscribe-notice-button {
   color: $lm-ci-text;
   background-color: $lm-ci;
   cursor: pointer;
@@ -161,12 +161,15 @@ header#hero {
   padding-right: 5vw;
 }
 
-.addthis_default_style {
+header {
+ .addthis_default_style {
   // Hacking AddThis default style
   position: absolute;
   right: 16px;
   top: 70px;
+  } 
 }
+
 
 #cookie-bar {
   // Hacking CookieBar z-index to show it over AddThis
@@ -179,6 +182,20 @@ header#hero {
     &:hover {
       color: inherit;
     }
+  }
+}
+
+.subscribe-notice {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .subscribe-notice-button {
+    margin-top: 10px;
   }
 }
 
@@ -196,18 +213,20 @@ header#hero {
 }
 
 .blog-category-box {
-  width: 40%;
+  width: 80%;
+  @media screen and (min-width: 480px) {
+    width: 40%;
+  }
   float: left;
   height: 100px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
-  padding: 20px;
+  padding: 40px;
   text-align: center;
   margin: 20px;
   position: relative;
-
 }
 
 .course {
@@ -228,10 +247,14 @@ header#hero {
     max-width: 20%;
   }
   h2, h3, p, button {
-    max-width: 80%;   
+    max-width: 100%;   
   }
   .course-button-wrapper {
     width: 100%;
     text-align: center;
   }
+}
+
+.entry-feature-image {
+  max-width: 100%;
 }

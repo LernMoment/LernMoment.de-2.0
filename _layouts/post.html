@@ -12,7 +12,16 @@
       {% if page.excerpt %}
         <p class="abstract">{{ page.excerpt }}</p>
       {% endif %}
+       {% if page.image.feature %}
+        <img src="{{ site.url }}/assets/images/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}">
+       {% endif %}
       {{ content }}
+        {% if page.show-lm-newsletter-subscribe-box %}
+          <div class="subscribe-notice">
+            <h5>Dieser LernMoment hat dir gefallen? <br> Dann melde dich an und du wirst über neue LernMomente informiert:</h5>
+            {% include lernmoment-subscribe.html %}
+          </div>
+        {% endif %}
         {% if site.owner.disqus-shortname %}
           <div id="disqus_thread"></div>
           {% include disqus.html %}

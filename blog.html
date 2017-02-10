@@ -1,6 +1,6 @@
 ---
 layout: page
-title: blog
+title: LernMoment Blog mit Beiträgen über Programmieren, Softwareentwicklung, C#, Angular 2, Git, etc.
 ---
 
 <div class="blog-overview">
@@ -8,54 +8,53 @@ title: blog
 <div class="blog-category-wrapper">
       <a href="/blog/alle">
         <div class="blog-category-box">
-            Alle
+          <span>Alle</span>
         </div>
       </a>
       <a href="/blog/angular2">
         <div class="blog-category-box">
-            Angular 2
+          <span>Angular 2</span>
         </div>
       </a>
     
       <a href="/blog/csharp-challenge">
         <div class="blog-category-box">
-            C# Challange
+          <span>C# Challange</span>
         </div>
       </a>
       <a href="/blog/csharp-programmieren">
         <div class="blog-category-box">
-            C# Programmieren  
+          <span>C# Programmieren</span> 
         </div>
       </a>
       <a href="/blog/csharp-tutorial-deutsch">
         <div class="blog-category-box">
-            C# Tutorial
+          <span>C# Tutorial</span> 
         </div>
       </a>
       <a href="/blog/einstieg-csharp">
         <div class="blog-category-box">
-          Einstieg C#
+          <span>Einstieg C#</span>
         </div>
       </a>
 
       <a href="/blog/hintergrund">
         <div class="blog-category-box">
-          Hintergrund
+          <span>Hintergrund</span>
         </div>
       </a>
     
   </div>
+  <!-- <br><br><br>
+  <h2>Übersicht über alle Blogposts</h2>
   {% for category in categories %}
-    <h2>{{ category | first }}</h2>
+    <h3>{{ category | first }}</h3>
     <p>{% for posts in category %}
       {% for post in posts %}
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          {{ post.title }}
-        </a>
-        {% if forloop.last == false %}
-          ,&nbsp;&nbsp;
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {% if forloop.last == false %},&nbsp;
         {% endif %}
       {% endfor %} 
     {% endfor %}</p>
-  {% endfor %}
+  {% endfor %} -->
 </div>

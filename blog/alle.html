@@ -4,7 +4,10 @@ title: blog alle
 ---
 
 <div class="blog-category-overview" id="alle">
-  <h1>Blogbeiträge zum Thema "Alle"</h1>
+  <h1>
+    <small>Blogbeiträge zum Thema</small>
+    Alle
+  </h1>
   {% for post in site.categories["alle"] %}
   <a href="{{ post.url | prepend: site.baseurl }}">
     <div class="post-preview">
