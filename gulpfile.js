@@ -1,8 +1,7 @@
-var config = require('./gulpconfig.json');
+
 var	gulp = require('gulp');
 var	shell = require('gulp-shell');
 var minifyHTML = require('gulp-minify-html');
-var cloudflare = require('gulp-cloudflare');
 var runSequence = require('run-sequence');
 var autoprefixer = require('gulp-autoprefixer');
 var uncss = require('gulp-uncss');
@@ -13,9 +12,8 @@ var jpegtran = require('imagemin-jpegtran');
 var gifsicle = require('imagemin-gifsicle');
 var replace = require('gulp-replace');
 var fs = require('fs');
-var download = require('gulp-download');
 
-gulp.task('jekyll', function() {
+gulp.task('jekyll-build', function() {
 	return gulp.src('index.html', { read: false })
 		.pipe(shell([
 			'jekyll build'
@@ -32,13 +30,15 @@ gulp.task('optimize-images', function () {
 		.pipe(gulp.dest('_site/'));
 });
 
+
 gulp.task('optimize-css', function() {
    return gulp.src('_site/assets/css/main.css')
 	   .pipe(autoprefixer())
-	   .pipe(uncss({
-		   html: ['_site/**/*.html'],
-		   ignore: []
-	   }))
+	   // Deactiated because it was not working together with AddThis and Cookie-Bar
+	   // .pipe(uncss({
+		  //  html: ['_site/**/*.html'],
+		  //  ignore: []
+	   // }))
 	   .pipe(minifyCss({keepBreaks: false}))
 	   .pipe(gulp.dest('_site/assets/css/'));
 });
@@ -55,57 +55,12 @@ gulp.task('optimize-html', function() {
 		.pipe(gulp.dest('_site/'));
 });
 
-gulp.task('fetch-newest-analytics', function() {
-	return download('https://www.google-analytics.com/analytics.js')
-    	.pipe(gulp.dest('assets/js'));
-});
-
-gulp.task('rsync-files', function() {
-	return gulp.src('index.html', { read: false })
-		.pipe(shell([
-			'cd _site && rsync -az --delete . ' + config.remoteServer + ':' + config.remotePath
-		]));
-});
-
-gulp.task('purge-cache', function() {
-	var options = {
-		token: config.cloudflareToken,
-		email: config.cloudflareEmail,
-		domain: config.cloudflareDomain
-	};
- 
-	cloudflare(options);
-});
-
-gulp.task('raw-deploy', function(callback) {
+gulp.task('build', function(callback) {
 	runSequence(
-		'jekyll',
-		'rsync-files',
-		'purge-cache',
-		callback
-	);
-});
-
-gulp.task('dry-run', function(callback) {
-	runSequence(
-		'fetch-newest-analytics',
-		'jekyll',
+		'jekyll-build',
 		'optimize-images',
 		'optimize-css',
 		'optimize-html',
-		callback
-	);
-});
-
-gulp.task('deploy', function(callback) {
-	runSequence(
-		'fetch-newest-analytics',
-		'jekyll',
-		'optimize-images',
-		'optimize-css',
-		'optimize-html',
-		'rsync-files',
-		'purge-cache',
 		callback
 	);
 });
