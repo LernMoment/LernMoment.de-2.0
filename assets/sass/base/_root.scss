@@ -288,3 +288,25 @@ header {
 .entry-feature-image {
   max-width: 100%;
 }
+
+.course-promo {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  padding: 40px;
+  text-align: center;
+  margin: 20px;
+  position: relative;
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    max-height: 150px;
+    max-width: 100%;
+  }
+  h2, h3, button {
+    text-align: center;  
+  }
+}
