@@ -88,7 +88,7 @@ footer {
         }
       }
     }
-  } 
+  }
 }
 
 nav {
@@ -197,7 +197,7 @@ header {
   position: absolute;
   right: 16px;
   top: 70px;
-  } 
+  }
 }
 
 
@@ -277,7 +277,7 @@ header {
     max-width: 20%;
   }
   h2, h3, button {
-    max-width: 80%;   
+    max-width: 80%;
   }
   .course-button-wrapper {
     width: 100%;
@@ -307,6 +307,72 @@ header {
     max-width: 100%;
   }
   h2, h3, button {
-    text-align: center;  
+    text-align: center;
   }
+}
+
+@-webkit-keyframes jump {
+  0%{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+  }
+  20%{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+  }
+  40%{
+	-webkit-transform: translateY(-30px);
+	transform: translateY(-30px);
+  }
+  50%{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+  }
+  60%{
+	-webkit-transform: translateY(-15px);
+	transform: translateY(-15px);
+  }
+  80%{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+  }
+  100%{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+  }
+}
+
+@keyframes jump {
+  0%{
+	transform: translateY(0);
+  }
+  20%{
+	transform: translateY(0);
+  }
+  40%{
+	transform: translateY(-30px);
+  }
+  50%{
+	transform: translateY(0);
+  }
+  60%{
+	transform: translateY(-15px);
+  }
+  80%{
+	transform: translateY(0);
+  }
+  100%{
+	transform: translateY(0);
+  }
+}
+
+.jump-arrow {
+  font-size: 30px;
+  font-weight: bold;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  -webkit-animation: jump 1.5s ease 0s infinite normal ;
+  animation: jump 1.5s ease 0s infinite normal ;
 }
