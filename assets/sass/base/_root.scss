@@ -45,7 +45,7 @@ p, ol, ul, li, legend {
 
 h1, h2, h3, h4, h5 {
   font-family: 'Roboto', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   letter-spacing: 3px;
 }
 
@@ -145,7 +145,7 @@ nav {
 
 header {
   font-family: 'Roboto', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   letter-spacing: 3px;
   .lernmoment-headline {
     font-size: 12vmin;
@@ -187,8 +187,8 @@ header#hero {
   margin-left: auto;
   margin-top: 5vh;
   margin-bottom: 5vh;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 header {
@@ -373,6 +373,14 @@ header {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-  -webkit-animation: jump 1.5s ease 0s infinite normal ;
-  animation: jump 1.5s ease 0s infinite normal ;
+  -webkit-animation: jump 1.5s ease 0s 5 normal;
+  animation: jump 1.5s ease 0s 5 normal;
+}
+
+code {
+  white-space:pre;
+  white-space:pre-wrap;
+  word-break:break-all;
+  word-wrap:break-word;
+  font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
