@@ -376,3 +376,11 @@ header {
   -webkit-animation: jump 1.5s ease 0s 5 normal;
   animation: jump 1.5s ease 0s 5 normal;
 }
+
+code {
+  white-space:pre;
+  white-space:pre-wrap;
+  word-break:break-all;
+  word-wrap:break-word;
+  font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
