@@ -3,6 +3,13 @@ $lm-ci: #00A8C6;
 $lm-ci-hover: #00d3f9;
 $lm-ci-text: #F9F2E7;
 
+@mixin box-shadow() {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+}
+
 body {
   color: rgb(33, 33, 33);
   font-weight: 400;
@@ -218,24 +225,18 @@ header {
 }
 
 .subscribe-notice {
+  @include box-shadow();
   margin-top: 20px;
   margin-bottom: 40px;
   padding: 10px;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
   .subscribe-notice-button {
     margin-top: 10px;
   }
 }
 
 .post-preview {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+  @include box-shadow();
   margin-bottom: 50px;
   padding: 20px;
 }
@@ -245,16 +246,13 @@ header {
 }
 
 .blog-category-box {
+  @include box-shadow();
   width: 80%;
   @media screen and (min-width: 480px) {
     width: 40%;
   }
   float: left;
   height: 100px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
   padding: 40px;
   text-align: center;
   margin: 20px;
@@ -262,15 +260,12 @@ header {
 }
 
 .course, .about {
+  @include box-shadow();
   position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 10px;
   margin-bottom: 50px;
   padding-left: 20px;
   z-index: 2;
-  &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
   img {
     position: absolute;
     right: 10px;
@@ -292,10 +287,7 @@ header {
 }
 
 .course-promo {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+  @include box-shadow();
   padding: 40px;
   text-align: center;
   margin: 20px;
