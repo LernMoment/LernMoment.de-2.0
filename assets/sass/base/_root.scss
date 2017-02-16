@@ -380,9 +380,10 @@ header {
 }
 
 code {
-  white-space:pre;
-  white-space:pre-wrap;
-  word-break:break-all;
-  word-wrap:break-word;
-  font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  padding: 10px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }

@@ -18,7 +18,7 @@ Wie häufig hast du schon am Anfang einer Methode die Parameter auf `null` über
 
 Es geht also um Aufrufe wie diesen:
 
-```
+```cs
 static void GebeMetaDatenAus(LernMoment moment)
 {
 	if(moment != null && moment.Author != null)
@@ -30,7 +30,7 @@ static void GebeMetaDatenAus(LernMoment moment)
 
 Dieses Überprüfen auf `null` gibt es in verschiedensten Geschmacksvarianten. Wobei alle Varianten den Quelltext nicht gerade leserlicher machen. In C# 6.0 wurde dafür der null-conditional Operator eingeführt. Damit kannst du das Beispiel von oben anpassen:
 
-```
+```cs
 static void GebeMetaDatenAus(LernMoment moment)
 {
 	Console.WriteLine($"Hier die Meta-Daten des LernMoments: Author = {moment?.Author}");
@@ -45,7 +45,7 @@ Findest du den Operator? Jup, es ist `?.`. Du verwendest also ein zusätzliches 
 
 Was würde also in dem Beispiel oben passieren, wenn ich die Methode so aufrufe `GebeMetaDatenAus(null);`? In der [String-Interpolation](/csharp-programmieren/mit-csharp-6-noch-mueheloser-werte-in-strings-einfuegen/), wird `moment` auf `null` geprüft. Dieses passiert, bevor die Eigenschaft `Author` aufgerufen wird. Somit wird keine `NullReferenceException` geworfen. Es wird `null` anstelle eines String mit dem Namen des Authors zurückgegeben. Die Ausgabe würde also so auf der Kommandozeile aussehen:
 
-```sh
+```shell
 $> Hier die Meta-Daten des LernMoments: Author = null
 ```
 
@@ -58,11 +58,11 @@ static string ExtrahiereVeroeffentlichungsDatum(LernMoment moment)
 }
 ```
 
-Nun wird sowohl `moment` als auch die Eigenschaft `VeroeffentlichtAm` auf `null` geprüft. 
+Nun wird sowohl `moment` als auch die Eigenschaft `VeroeffentlichtAm` auf `null` geprüft.
 
-Wie du siehst, bietet dir dieser Operator einige Vorteile. Wichtig ist allerdings, dass du dir überlegst wann und wie du ihn einsetzen kannst und willst. Ich persönlich finde, dass Quelltext möglichst für jeden verständlich sein sollte. 
+Wie du siehst, bietet dir dieser Operator einige Vorteile. Wichtig ist allerdings, dass du dir überlegst wann und wie du ihn einsetzen kannst und willst. Ich persönlich finde, dass Quelltext möglichst für jeden verständlich sein sollte.
 
-Daraus folgt, dass ich versuche den verwendeten Sprachumfang möglichst gering zu halten. Es ist wie mit einer Fremdsprache. Es ist toll, wenn du dich gewählt ausdrücken kannst und viele spezielle Vokabeln kennst, allerdings läufst du damit auch Gefahr, dass dich andere nicht verstehen können, weil sie die Vokabel nicht kennen. Ich werde diesen Operator zukünftig häufiger einsetzen. Allerdings nicht um jeden Preis. 
+Daraus folgt, dass ich versuche den verwendeten Sprachumfang möglichst gering zu halten. Es ist wie mit einer Fremdsprache. Es ist toll, wenn du dich gewählt ausdrücken kannst und viele spezielle Vokabeln kennst, allerdings läufst du damit auch Gefahr, dass dich andere nicht verstehen können, weil sie die Vokabel nicht kennen. Ich werde diesen Operator zukünftig häufiger einsetzen. Allerdings nicht um jeden Preis.
 
 Viele Beispiele die ich zu diesem Thema gefunden haben, zeigen insbesondere die Vorteile des *null-conditional* Operator in längeren Aufrufketten. Auch wenn das sicherlich korrekt ist, solltest du immer bedenken, dass eine längere Aufrufkette häufig ein Indiz für fragwürdigen Quelltext ist. Ich denke da an das *Law of Demeter*. Dazu mehr in einem weiteren LernMoment.
 
@@ -78,7 +78,7 @@ Jan
 -	Dieser Operator ist nicht gerade selbsterklärend. Daher gibt es einige Entwickler, die mit der Syntax nicht vertraut sind. Überlege dir, ob dir Verständlichkeit für jeden, oder "Aussehen" wichtiger sind.
 -	Wenn du diesen Operator in einer Aufrufkette einsetzen willst, überprüfe erst, ob du nicht die Aufrufkette entfernen solltest (*Law of Demeter*).
 
-### Lernquiz 
+### Lernquiz
 
 Verwende folgende Fragen, um das Gelernte von heute zu festigen:
 
