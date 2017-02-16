@@ -131,6 +131,23 @@ nav {
   }
 }
 
+.bubble {
+  background: rgb(255,101,80);
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  color: $lm-ci-text;
+  &:hover {
+    color: $lm-ci-text;
+    background: rgb(220,78,65);
+  }
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 10px;
+}
+
 .button, .subscribe-notice-button {
   color: $lm-ci-text;
   font-weight: 200;
