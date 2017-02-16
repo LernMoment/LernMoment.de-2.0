@@ -1,0 +1,11 @@
+# adapt configuration to development environment within docker
+url: http://0.0.0.0:4000
+# future: true
+
+# disable Analytics for local development
+google:
+    plus: #username
+    analytics: 
+    verify:
+    ad-client:
+    ad-slot:

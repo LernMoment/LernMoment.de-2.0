@@ -1,0 +1,6 @@
+_site/
+.sass_cache/
+node_modules/
+deployment/
+Dockerfile
+README.md

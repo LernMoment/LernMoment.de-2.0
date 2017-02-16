@@ -1,0 +1,12 @@
+jekyll:
+  build: .
+  ports:
+    - '4000:4000'
+  volumes:
+    - .:/src/
+    - /src/node_modules
+    - /src/.sass-cache
+  command: serve --host 0.0.0.0 --config _config.yml,_config-devenv.yml
+  environment:
+    - TZ=Europe/Berlin
+    - LANG=C.UTF-8
