@@ -243,6 +243,32 @@ header {
 
 .blog-category-wrapper {
   overflow: auto;
+  a {
+    color: $lm-ci-text;
+  }
+  // Color taken from official logo of angular 2
+  #angular2 {
+    background: rgb(195,0,47);
+  }
+  // Colors taken from Microsoft Website for .net and c#: https://docs.microsoft.com/de-de/dotnet/
+  #c-sharp-challange {
+    background: rgb(108,66,156);
+  }
+  #c-sharp-programmieren {
+    background: rgb(92,45,145);
+  }
+  #c-sharp-tutorial {
+    background: rgb(30,158,36);
+  }
+  #c-sharp-einstieg {
+    background: rgb(5,147,12);
+  }
+  #alle {
+    background: $lm-ci;
+  }
+  #hintergrund {
+    background: $lm-ci-hover;
+  }
 }
 
 .blog-category-box {
@@ -253,7 +279,6 @@ header {
   }
   float: left;
   height: 100px;
-  padding: 40px;
   text-align: center;
   margin: 20px;
   position: relative;
