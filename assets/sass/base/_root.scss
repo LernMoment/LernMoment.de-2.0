@@ -5,7 +5,7 @@ $lm-ci-text: #F9F2E7;
 
 body {
   color: rgb(33, 33, 33);
-  font-weight: 300;
+  font-weight: 400;
   background-color: rgb(250, 250, 250);
   letter-spacing: 0;
   font-style: normal;
@@ -377,13 +377,4 @@ header {
   margin-top: 30px;
   -webkit-animation: jump 1.5s ease 0s 5 normal;
   animation: jump 1.5s ease 0s 5 normal;
-}
-
-code {
-  padding: 10px;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }

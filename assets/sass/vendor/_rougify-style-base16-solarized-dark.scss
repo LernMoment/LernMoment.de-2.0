@@ -1,3 +1,15 @@
+.highlight {
+  font-size: 14px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 400;
+  display: block;
+  padding: 2.35765%;
+  border-radius: 3px;
+  line-height: 1.5;
+  margin-top: 0;
+  overflow-y: scroll;
+}
+
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
@@ -75,8 +87,4 @@
 }
 .highlight .ss {
   color: #859900;
-}
-
-.highlight {
-  padding: 15px;
 }
