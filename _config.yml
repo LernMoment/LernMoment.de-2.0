@@ -7,8 +7,7 @@
 
 # Site settings
 title: Programmieren und Softwareentwicklung lernen mit C#, Git, GitHub, etc. auf LernMoment bei Jan Suchotzki
-description: Programmieren lernen mit C#, Git, GitHub, etc. auf LernMoment
-baseurl: "" # the subpath of your site, e.g. /blog
+description: Programmieren lernen mit C#, Git, GitHub, etc. auf LernMoment bei Jan Suchotzki
 url: "http://www.lernmoment.de" # the base hostname & protocol for your site
 
 permalink:  /:categories/:title/
@@ -26,6 +25,9 @@ sass:
 
 # Build settings
 exclude:
+  - docker-compose.yml
+  - gulpfile.js
+  - LICENSE
   - Gemfile
   - Gemfile.lock
   - package.json
@@ -44,21 +46,6 @@ owner:
   avatar: jan-suchotzki-photo.jpg
   email: jan@lernmoment.de
   disqus-shortname: lernmomentde
-  twitter: LernMoment
-  facebook: LernMoment
-  github: lernmoment
-  stackexchange: http://stackoverflow.com/users/5258906/jan-suchotzki
-  linkedin: #username
-  instagram: #username
-  flickr: #username
-  tumblr: #username
-  pinterest: #username
-  weibo: #userid
   youtube: UC5jCUQ6IPHtQP5r4y9byCqA
   google:
-    plus: #username
     analytics: UA-65977856-1
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
