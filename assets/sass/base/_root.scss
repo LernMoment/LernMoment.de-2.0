@@ -139,23 +139,6 @@ nav {
   }
 }
 
-.bubble {
-  background: rgb(255,101,80);
-  display: inline-block;
-  border-radius: 50%;
-  text-align: center;
-  color: $lm-ci-text;
-  &:hover {
-    color: $lm-ci-text;
-    background: rgb(220,78,65);
-  }
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 10px;
-}
-
 .button, .subscribe-notice-button {
   color: $lm-ci-text;
   font-weight: 200;
@@ -219,10 +202,30 @@ header#hero {
   max-width: 740px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 40px;
+  margin-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.cta-row {
+  text-align: center;
+  padding: 0;
+  div {
+    width: 100%;
+    margin-bottom: 20px;
+    @media screen and (min-width: 640px) {
+      width: 32.9%;
+      .center {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  display:inline-block;
+  }
+  p {
+    font-style: italic;
+  }
 }
 
 header {

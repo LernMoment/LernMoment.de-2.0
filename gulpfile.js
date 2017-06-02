@@ -1,6 +1,6 @@
 
-var	gulp = require('gulp');
-var	shell = require('gulp-shell');
+var gulp = require('gulp');
+var shell = require('gulp-shell');
 var minifyHTML = require('gulp-minify-html');
 var runSequence = require('run-sequence');
 var autoprefixer = require('gulp-autoprefixer');
@@ -13,10 +13,10 @@ var gifsicle = require('imagemin-gifsicle');
 var replace = require('gulp-replace');
 var fs = require('fs');
 
-gulp.task('jekyll-build', function() {
+gulp.task('jekyll-build', function () {
 	return gulp.src('index.html', { read: false })
 		.pipe(shell([
-			'jekyll build'
+			'bundle exec jekyll build'
 		]));
 });
 
@@ -24,43 +24,51 @@ gulp.task('optimize-images', function () {
 	return gulp.src(['_site/**/*.jpg', '_site/**/*.jpeg', '_site/**/*.gif', '_site/**/*.png'])
 		.pipe(imagemin({
 			progressive: false,
-			svgoPlugins: [{removeViewBox: false}],
+			svgoPlugins: [{ removeViewBox: false }],
 			use: [pngquant(), jpegtran(), gifsicle()]
 		}))
 		.pipe(gulp.dest('_site/'));
 });
 
 
-gulp.task('optimize-css', function() {
-   return gulp.src('_site/assets/css/main.css')
-	   .pipe(autoprefixer())
-	   // Deactiated because it was not working together with AddThis and Cookie-Bar
-	   // .pipe(uncss({
-		  //  html: ['_site/**/*.html'],
-		  //  ignore: []
-	   // }))
-	   .pipe(minifyCss({keepBreaks: false}))
-	   .pipe(gulp.dest('_site/assets/css/'));
+gulp.task('optimize-css', function () {
+	return gulp.src('_site/assets/css/main.css')
+		.pipe(autoprefixer())
+		// Deactiated because it was not working together with AddThis and Cookie-Bar
+		// .pipe(uncss({
+		//  html: ['_site/**/*.html'],
+		//  ignore: []
+		// }))
+		.pipe(minifyCss({ keepBreaks: false }))
+		.pipe(gulp.dest('_site/assets/css/'));
 });
 
-gulp.task('optimize-html', function() {
+gulp.task('optimize-html', function () {
 	return gulp.src('_site/**/*.html')
 		.pipe(minifyHTML({
 			quotes: true
 		}))
-		.pipe(replace('<link rel="stylesheet" href="/assets/css/main.css">', function(s) {
+		.pipe(replace('<link rel="stylesheet" href="/assets/css/main.css">', function (s) {
 			var style = fs.readFileSync('_site/assets/css/main.css', 'utf8');
 			return '<style>\n' + style + '\n</style>';
 		}))
 		.pipe(gulp.dest('_site/'));
 });
 
-gulp.task('build', function(callback) {
+gulp.task('build', function (callback) {
 	runSequence(
 		'jekyll-build',
 		'optimize-images',
 		'optimize-css',
 		'optimize-html',
+		callback
+	);
+});
+
+gulp.task('assets', function (callback) {
+	runSequence(
+		'optimize-images',
+		'optimize-css',
 		callback
 	);
 });
