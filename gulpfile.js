@@ -72,3 +72,10 @@ gulp.task('assets', function (callback) {
 		callback
 	);
 });
+
+gulp.task('css', function (callback) {
+	runSequence(
+		'optimize-css',
+		callback
+	);
+});

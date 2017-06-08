@@ -228,6 +228,29 @@ header#hero {
   }
 }
 
+.rm-row {
+  text-align: center;
+  padding: 0;
+  div {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    @media screen and (min-width: 640px) {
+      width: 49.7%;
+      padding: 0;
+      &:nth-of-type(1) {
+        padding-right: 20px;
+      }
+    }
+  display:inline-block;
+  }
+  p {
+    text-align: justify;
+    font-style: italic;
+  }
+}
+
 header {
  .addthis_default_style {
   // Hacking AddThis default style
