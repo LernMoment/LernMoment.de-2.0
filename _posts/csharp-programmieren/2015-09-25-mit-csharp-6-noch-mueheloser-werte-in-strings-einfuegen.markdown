@@ -12,6 +12,7 @@ show-lm-newsletter-subscribe-box: true
 tags: [Inspiration, Datentypen, C# 6.0]
 image:
   feature: csharp-programmieren.jpg
+iteration: strings
 ---
 
 Du weißt nicht was ein InspirationsMoment ist? Im Hintergrundartikel ["Mehr Output! Weniger Input!"](/hintergrund/mehr-output-weniger-input/) bekommst du mehr Informationen dazu.

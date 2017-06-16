@@ -12,6 +12,7 @@ image:
   feature: csharp-programmieren.jpg
 modified:
 date: 2015-08-05T06:00:00+02:00
+iteration: strings
 ---
 
 Optimierung ist eines der Themen bei denen es mir wirklich schwer fällt nicht missionarisch zu werden. Meine Einstellung zum Thema kannst du ganz gut anhand folgender Optimierungsregeln erkennen:

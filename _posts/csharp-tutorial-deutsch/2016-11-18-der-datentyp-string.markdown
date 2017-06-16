@@ -12,6 +12,7 @@ image:
   feature: csharp-tutorial-feature.jpg
 modified:
 date: 2016-11-18T07:00:00+01:00
+iteration: strings
 ---
 
 > Schau dir auch die weiteren Folgen des [C# Tutorial Deutsch](/csharp-tutorial-deutsch/) an.
