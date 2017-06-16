@@ -281,6 +281,14 @@ header {
       color: inherit;
     }
   }
+  h2 {
+    margin-bottom: 0;
+  }
+  .post-date {
+    text-align: right;
+    margin-bottom: 15px;
+    font-family: monospace;
+  }
 }
 
 .subscribe-notice {
@@ -545,4 +553,9 @@ header {
       }
     }
   }
+}
+
+.readmore {
+  text-align: right;
+  text-decoration: overline;
 }

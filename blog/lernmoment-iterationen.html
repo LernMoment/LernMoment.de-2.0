@@ -12,12 +12,13 @@ title: LernMoment Iterationen
       <a href="{{ page.url | prepend: site.baseurl }}">
         <div class="post-preview">
             <h2>
-              {{ page.title }}<br>
+              {{ page.title }}
             </h2>
           <div class="post-date">{{ post.date | date: "%-d. %b %Y" }}</div>
           <p>
             {{ page.excerpt }}
           </p>
+          <div class="readmore">↪ weiterlesen</div>
         </div>
       </a>
     {% endif %}
