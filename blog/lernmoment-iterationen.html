@@ -5,12 +5,11 @@ title: LernMoment Iterationen
 
 <div class="blog-category-overview" id="iterationen">
   <h1>
-    <small>Blogbeiträge zum Thema</small>
     {{ page.title }}
   </h1>
   {% for page in site.pages %}
     {% if page.layout == 'iteration' %}
-      <a href="{{ post.url | prepend: site.baseurl }}">
+      <a href="{{ page.url | prepend: site.baseurl }}">
         <div class="post-preview">
             <h2>
               {{ page.title }}<br>

@@ -16,22 +16,23 @@
        {% endif %}
       {{ content }}
 
-      {% for post in site.posts %}
-        {% if post.iteration contains page.iteration-shorthand %}
-          <a href="{{ post.url | prepend: site.baseurl }}">
-            <div class="post-preview">
-                <h2>
-                  {{ post.title }}<br>
-                </h2>
-              <div class="post-date">{{ post.date | date: "%-d. %b %Y" }}</div>
-              <p>
-                {{ post.excerpt }}
-              </p>
-            </div>
-          </a>
-        {% endif %}
-      {% endfor %}
-
+      <h2>Iterationen zu diesem Thema</h2>
+      <ol class="iteration-list">
+        {% for post in site.posts %}
+          {% if post.iteration contains page.iteration-shorthand %}
+                <li>
+                  <a href="{{ post.url | prepend: site.baseurl }}">
+                    <h3>
+                      {{ post.title }}
+                    </h3>
+                    <p>
+                      {{ post.excerpt }}
+                    </p>
+                  </a>
+                </li>
+          {% endif %}
+        {% endfor %}
+      </ol>
       {% if page.show-lm-newsletter-subscribe-box %}
         <div class="subscribe-notice">
           <h5>Dieser LernMoment hat dir gefallen? <br> Dann melde dich an und du wirst über neue LernMomente informiert:</h5>
