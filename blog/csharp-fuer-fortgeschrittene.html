@@ -1,0 +1,26 @@
+---
+layout: page
+title: C# für Fortgeschrittene
+---
+
+<div class="blog-category-overview" id="fortgeschrittene">
+  <h1>
+    <small>Blogbeiträge zum Thema</small>
+    {{ page.title }}
+  </h1>
+  {% for post in site.posts %}
+    {% if post.categories contains "csharp-programmieren" %}
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        <div class="post-preview">
+            <h2>
+              {{ post.title }}<br>
+            </h2>
+          <div class="post-date">{{ post.date | date: "%-d. %b %Y" }}</div>
+          <p>
+            {{ post.excerpt }}
+          </p>
+        </div>
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>

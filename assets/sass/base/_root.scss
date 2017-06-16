@@ -304,42 +304,33 @@ header {
   a {
     color: $lm-ci-text;
   }
-  // Color taken from official logo of angular 2
-  #angular2 {
-    background: rgb(195,0,47);
-  }
   // Colors taken from Microsoft Website for .net and c#: https://docs.microsoft.com/de-de/dotnet/
-  #c-sharp-challange {
+  #einsteiger {
     background: rgb(108,66,156);
   }
-  #c-sharp-programmieren {
-    background: rgb(92,45,145);
-  }
-  #c-sharp-tutorial {
+  #fortgeschrittene {
     background: rgb(30,158,36);
   }
-  #c-sharp-einstieg {
-    background: rgb(5,147,12);
-  }
-  #alle {
+  #iterationen {
     background: $lm-ci;
-  }
-  #hintergrund {
-    background: $lm-ci-hover;
   }
 }
 
 .blog-category-box {
   @include box-shadow();
   width: 80%;
-  @media screen and (min-width: 480px) {
-    width: 40%;
-  }
-  float: left;
-  height: 100px;
+  float: center;
   text-align: center;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
   position: relative;
+  h2 {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }
 
 .course, .about {
