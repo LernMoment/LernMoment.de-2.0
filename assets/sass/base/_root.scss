@@ -559,3 +559,28 @@ header {
   text-align: right;
   text-decoration: overline;
 }
+
+.read-also {
+  margin: 30px 0;
+  div {
+    float: left;
+    text-align: center;
+    width: 33.33333333%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.clearfix {
+  &:before,
+  &:after {
+  content: " ";
+  display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  *zoom: 1; // Stupid fix for stupid old IEs
+}

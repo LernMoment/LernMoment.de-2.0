@@ -125,3 +125,5 @@ Viel Spaß beim fokussierten Üben
 Jan
 
 PS: Wenn dir dieser Artikel und insbesondere der praktische Teil gefallen hat, dann hinterlasse doch einen Kommentar oder schreib mir eine [Mail](mailto:jan@lernmoment.de). Dann werde ich zukünftig mehr Übungen in diese Richtung anbieten.  
+
+{% include read-also.html link1='/einstieg-csharp/antworten-zu-allgemeinen-fragen/' link2='/csharp-programmieren/thread-safe-addieren-und-mehr-mit-interlocked/' link3='/iterations/strings/' title1='Allgemeine Fragen zu Udemy?' title2='Thread-safe addieren und mehr mit Interlocked' title3='Strings: So bändigt ihr den Text beim Programmieren' %} 
