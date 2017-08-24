@@ -38,7 +38,7 @@ exclude:
   - CNAME
   - node_modules
   - assets/sass
-  - *.pxm
+  - "*.pxm"
   - deployment
 
 # Plugin settings
