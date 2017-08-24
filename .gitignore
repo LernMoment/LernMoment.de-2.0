@@ -4,3 +4,4 @@ _site
 node_modules
 assets/js/analytics.js
 .DS_Store
+deployment/*.tgz
