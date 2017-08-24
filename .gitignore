@@ -3,3 +3,4 @@ _site
 .jekyll-metadata
 node_modules
 assets/js/analytics.js
+.DS_Store
