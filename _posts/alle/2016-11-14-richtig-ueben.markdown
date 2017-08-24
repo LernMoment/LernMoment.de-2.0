@@ -16,7 +16,7 @@ date: 2016-11-14T01:00:00+01:00
 
 > *UPDATE:* Das Thema dieses Artikels erkläre ich dir auch im neuen Video [Wie du programmieren lernst - Episode 1: Üben](https://youtu.be/fLwpnLXIKrI).
 >
-> *Hinweis:* Dieser Artikel ist erschienen im Kontext der [LernMoment Geburtstagswochen](/erster-geburtstag/). Vielen Dank für dein Interesse in den letzten 12 Monaten!
+> *Hinweis:* Dieser Artikel ist erschienen im Kontext der LernMoment Geburtstagswochen. Vielen Dank für dein Interesse in den letzten 12 Monaten!
 
 Kennst du das? Du nimmst dir vor heute endlich mal eine Übung zu machen. Nachdem es schon gar nicht so einfach war eine gute Übung zu finden, stehst du nun vor dem Problem wie du anfangen sollst. Vielleicht hast du dir eine kleine Anwendung wie beispielsweise ein Mini-Spiel (z.B. Tic Tac Toe auf der Konsole) ausgesucht und fragst dich nun welche Klassen du brauchst.
 

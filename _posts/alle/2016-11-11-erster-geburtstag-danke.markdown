@@ -22,11 +22,6 @@ Hier geht es allerdings nicht um mich, sondern um dich. Ich möchte einfach **Da
 
 Zu dieser **Geburtstagsparty gebe ich einen aus**. Dazu habe ich mir etwas ganz besonderes ausgedacht. Du bekommst 2 Wochen lang jeden Tag etwas neues von mir. Ich habe **neue Videos, Artikel, Kurse und noch einiges mehr** für dich vorbereitet und hoffe, dass für dich etwas passendes dabei ist. Ein Geschenk brauche ich nicht, aber du würdest mir eine riesige Freude machen, wenn du diese Seite, oder Artikel / Videos die dir besonders gefallen in deinem Netzwerk teilst.   
 
-<div class="subscribe-notice">
-<a markdown="0" href="/erster-geburtstag/" class="notice-button">Zu den Geburtstags-Spezials >></a>
-</div>
-
-
 Neben den kostenlosen Artikeln, Tutorials und Videos die ich als Dankeschön vorbereitet habe, biete ich dir meine Online-Kurse zum **Geburtstags-Spezial-Preis** an. Die Angebote wie auch den Übersichtsplan wann welche Artikel, ... im Rahmen der LernMoment's Geburtstagswochen erscheinen findest du in den folgenden Abschnitten.
 
 Mir bleibt nur dir zu danken für deine Unterstützung. Damit du auch in den kommenden 12 Monaten viele interessante Dinge über professionelle Softwareentwicklung lernen kannst, habe ich schon eine lange Liste an Themen die ich für dich aufbereiten werde. Dabei werden natürlich die Themen C# und GitHub bedient, aber ich bin auch an einem (für mich) ganz neuen Themengebiet, welches ich unglaublich spannend finde.
