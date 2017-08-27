@@ -65,6 +65,12 @@ rm -rf $SITE_SOURCE
 rm -f $ZIPPED_SITE
 
 echo "Local #2 -> Erstelle Seite neu für $ENV"
+# Schnellerer Build, wenn image nicht erst gelöscht wird, aber so ist es sicher, dass alles
+# komplett neu erstellt und übersetzt wird.
+if [[ "$(docker images -q lernmoment:latest 2> /dev/null)" != "" ]]; then
+  # image existiert! Also löschen wir es!
+  docker rmi lernmoment:latest
+fi
 docker build . -t lernmoment:latest
 docker run --rm -v $(pwd):/src -v /src/node_modules -v /src/.sass-cache -e "TZ=Europe/Berlin" -e "LANG=C.UTF-8" --entrypoint="/bin/bash" -p 4000:4000 lernmoment:latest -c "jekyll build --config $SITE_CONFIG --no-watch"
 tar cvzf $ZIPPED_SITE $SITE_SOURCE
