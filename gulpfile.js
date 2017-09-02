@@ -16,7 +16,14 @@ var fs = require('fs');
 gulp.task('jekyll-build', function () {
 	return gulp.src('index.html', { read: false })
 		.pipe(shell([
-			'bundle exec jekyll build'
+			'bundle exec jekyll build --config _config.yml'
+		]));
+});
+
+gulp.task('jekyll-build-staging', function () {
+	return gulp.src('index.html', { read: false })
+		.pipe(shell([
+			'bundle exec jekyll build --config _config-staging.yml'
 		]));
 });
 
@@ -58,6 +65,16 @@ gulp.task('optimize-html', function () {
 gulp.task('build', function (callback) {
 	runSequence(
 		'jekyll-build',
+		'optimize-images',
+		'optimize-css',
+		'optimize-html',
+		callback
+	);
+});
+
+gulp.task('build-staging', function (callback) {
+	runSequence(
+		'jekyll-build-staging',
 		'optimize-images',
 		'optimize-css',
 		'optimize-html',
