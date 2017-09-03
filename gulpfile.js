@@ -23,7 +23,7 @@ gulp.task('jekyll-build', function () {
 gulp.task('jekyll-build-staging', function () {
 	return gulp.src('index.html', { read: false })
 		.pipe(shell([
-			'bundle exec jekyll build --config _config-staging.yml'
+			'bundle exec jekyll build --config _config.yml,_config-staging.yml'
 		]));
 });
 
