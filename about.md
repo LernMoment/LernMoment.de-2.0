@@ -37,6 +37,12 @@ Unabhängig davon ob du weiter ziehst oder dich noch ein wenig länger mit LernM
 
 Du bist noch dabei? Super! In den folgenden Abschnitten erfährst du etwas mehr über mich, Jan Suchotzki, und natürlich über LernMoment.de.
 
+</div>
+
+<img class="float-right-img" alt="Jan Suchotzki - Software & Technologie Geek" src="/assets/images/jan-suchotzki-garten.jpg">
+
+<div markdown="1">
+
 Warum heißt diese Seite nun LernMoment? Das geht darauf zurück, dass ich mich sehr intensiv mit Motivation und Veränderungen beschäftigt habe. In meiner Zeit als angestellter Softwareentwickler habe ich ein Veränderungsprojekt begleitet bei dem es darum ging die Arbeitsweise einer kompletten Entwicklungsabteilung zu verändern. Dies hat viele Jahre gedauert und war extrem zäh.
 
 Seitdem ich mich mehr mit diesem Thema beschäftige, bin ich zu der Überzeugung gekommen, dass Veränderungen immer in kleinen Schritten eingeführt werden sollten. Das gilt auch bzw. ganz besonders fürs Lernen.
