@@ -11,7 +11,7 @@ excerpt: Über Jan Suchotzki - Software und Technologie Geek und Betreiber von L
   <h3>
     Über LernMoment
   </h3>
-  <img alt="Jan Suchotzki - Softwareentwickler aus Leidenschaft" src="/assets/images/jan-suchotzki-photo.jpg">
+  <img class="top-img" alt="Jan Suchotzki - Softwareentwickler aus Leidenschaft" src="/assets/images/jan-suchotzki-photo.jpg">
 
 <div markdown="1">
 
