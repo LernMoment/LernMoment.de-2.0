@@ -28,19 +28,19 @@ then
 fi
 
 # Informationen für Staging
-STAGING_SITE_CONFIG=_config.yml,_config-staging.yml
+STAGING_SITE_BUILD_COMMAND="./node_modules/.bin/gulp build-staging"
 STAGING_ZIPPED_SITE=deployment/lm-site-staging.tgz
 STAGING_SERVER_AREA=1und1:staging
 
 #Informationen für Production
-PRODUCTION_SITE_CONFIG=_config.yml
+PRODUCTION_SITE_BUILD_COMMAND="./node_modules/.bin/gulp build"
 PRODUCTION_ZIPPED_SITE=deployment/lm-site-production.tgz
 PRODUCTION_SERVER_AREA=1und1:production
 PRODUCTION_BRANCH=master
 
 if [ "$ENV" == "production" ]
 then
-  SITE_CONFIG=$PRODUCTION_SITE_CONFIG
+  SITE_BUILD_COMMAND=$PRODUCTION_SITE_BUILD_COMMAND
   ZIPPED_SITE=$PRODUCTION_ZIPPED_SITE
   SERVER_AREA=$PRODUCTION_SERVER_AREA
 
@@ -52,7 +52,7 @@ then
 
 elif [ "$ENV" == "staging" ]
 then
-  SITE_CONFIG=$STAGING_SITE_CONFIG
+  SITE_BUILD_COMMAND=$STAGING_SITE_BUILD_COMMAND
   ZIPPED_SITE=$STAGING_ZIPPED_SITE
   SERVER_AREA=$STAGING_SERVER_AREA
 else
@@ -72,7 +72,7 @@ if [[ "$(docker images -q lernmoment:latest 2> /dev/null)" != "" ]]; then
   docker rmi lernmoment:latest
 fi
 docker build . -t lernmoment:latest
-docker run --rm -v $(pwd):/src -v /src/node_modules -v /src/.sass-cache -e "TZ=Europe/Berlin" -e "LANG=C.UTF-8" --entrypoint="/bin/bash" -p 4000:4000 lernmoment:latest -c "jekyll build --config $SITE_CONFIG --no-watch"
+docker run --rm -v $(pwd):/src -v /src/node_modules -v /src/.sass-cache -e "TZ=Europe/Berlin" -e "LANG=C.UTF-8" --entrypoint="/bin/bash" -p 4000:4000 lernmoment:latest -c "$SITE_BUILD_COMMAND"
 tar cvzf $ZIPPED_SITE $SITE_SOURCE
 
 echo "Local #3 -> Kopiere neue Version auf Server nach: $ENV"
