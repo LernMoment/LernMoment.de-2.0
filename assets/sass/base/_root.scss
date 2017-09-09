@@ -307,9 +307,14 @@ header {
   @include box-shadow();
   margin-bottom: 50px;
   padding: 20px;
-  .entry-feature-image {
-    max-height: 35px;
-    max-width: 100%;
+  .entry-feature-image-wrapper {
+    height: 35px;
+    width: 100%;
+    overflow: hidden;
+    .entry-feature-image {
+      min-height: 100%;
+      min-width: 100%;
+    }
   }
 }
 

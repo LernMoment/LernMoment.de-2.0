@@ -17,7 +17,9 @@ title: Programmieren für Einsteiger
             </h2>
           <div class="post-date">{{ post.date | date: "%-d. %b %Y" }}</div>
           {% if post.image.feature %}
+          <div class="entry-feature-image-wrapper">
             <img src="{{ site.url }}/assets/images/{{ post.image.feature }}" class="entry-feature-image" alt="{{ page.title }}">
+          </div>
           {% endif %}
           <p>
             {{ post.excerpt }}
