@@ -365,16 +365,28 @@ header {
     top: 10px;
     max-height: 100%;
     max-width: 20%;
+    @media only screen and (max-width : 480px) {
+      position: initial;
+      max-width: 100%;
+    }
   }
   .float-left-img {
     margin-top: 1em;
     padding-right: 15px;
     float: left;
+    max-width: 100%;
+    @media only screen and (max-width : 480px) {
+      padding: 0;
+    }
   }
   .float-right-img {
     margin-top: 1em;
     padding-left: 15px;
     float: right;
+    max-width: 100%;
+    @media only screen and (max-width : 480px) {
+      padding: 0;
+    }
   }
   h2, h3, button {
     max-width: 80%;
