@@ -307,6 +307,10 @@ header {
   @include box-shadow();
   margin-bottom: 50px;
   padding: 20px;
+  .entry-feature-image {
+    max-height: 35px;
+    max-width: 100%;
+  }
 }
 
 .blog-category-wrapper {
@@ -438,10 +442,12 @@ header {
   }
 }
 
-.entry-feature-image {
-  max-height: 35px;
-  max-width: 100%;
+.post {
+  .entry-feature-image {
+    max-width: 100%;
+  }
 }
+
 
 .course-promo {
   @include box-shadow();
