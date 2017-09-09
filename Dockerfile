@@ -39,7 +39,7 @@ RUN bundle install
 # install npm dependencies (locally, which means /src/node_modules must be a Volume!)
 COPY package.json /src/
 RUN npm install \
-  && npm cache clean
+  && npm cache clean --force
 
 EXPOSE 4000
 ENTRYPOINT ["jekyll"]

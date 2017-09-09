@@ -38,6 +38,8 @@ exclude:
   - CNAME
   - node_modules
   - assets/sass
+  - "*.pxm"
+  - deployment
 
 # Plugin settings
 gems:

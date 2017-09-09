@@ -1,0 +1,14 @@
+# adapt configuration to development environment within docker
+url: http://staging.lernmoment.de
+future: false
+
+# disable Analytics for local development
+owner:
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+
