@@ -1,13 +1,14 @@
 ---
 layout: page
 title: LernMoment | Programmieren für Einsteiger
+inline-title: Programmieren für Einsteiger
 description: Lerne programmieren auf LernMoment mit Jan Suchotzki
 ---
 
 <div class="blog-category-overview" id="einsteiger">
   <h1>
     <small>Blogbeiträge zum Thema</small>
-    {{ page.title }}
+    {{ page.inline-title }}
   </h1>
   {% for post in site.posts %}
     {% if post.categories contains "alle" or post.categories contains "hintergrund" or post.categories contains "einstieg-csharp" %}
