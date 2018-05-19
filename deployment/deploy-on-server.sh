@@ -13,8 +13,8 @@ SITE_NEW=_site
 SITE_PREVIOUS=lernmoment-old
 
 # Informationen für Staging
-STAGING_ZIPPED_SITE=lm-site-staging.tgz
-STAGING_SERVER_AREA=~/staging
+STAGING_ZIPPED_SITE=lm-site-staging2.tgz
+STAGING_SERVER_AREA=~/staging2
 
 # Informationen für Production
 PRODUCTION_ZIPPED_SITE=lm-site-production.tgz

@@ -29,8 +29,8 @@ fi
 
 # Informationen für Staging
 STAGING_SITE_BUILD_COMMAND="./node_modules/.bin/gulp build-staging"
-STAGING_ZIPPED_SITE=deployment/lm-site-staging.tgz
-STAGING_SERVER_AREA=1und1:staging
+STAGING_ZIPPED_SITE=deployment/lm-site-staging2.tgz
+STAGING_SERVER_AREA=1und1:staging2
 
 #Informationen für Production
 PRODUCTION_SITE_BUILD_COMMAND="./node_modules/.bin/gulp build"
