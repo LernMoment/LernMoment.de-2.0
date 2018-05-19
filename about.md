@@ -94,5 +94,4 @@ Jan
   <div class="course-button-wrapper">
     <a class="button" title="Erfahre mehr über meine Kurse" href="/courses">jetzt mit mir programmieren lernen</a>
   </div>
-  <div class="addthis_inline_follow_toolbox"></div>
 </section>
